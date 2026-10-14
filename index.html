@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Anna!</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 380px;
+            width: 90%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
+        }
+        .btn {
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
+            transition: transform 0.2s;
+        }
+        .btn:active {
+            transform: scale(0.95);
+        }
+        .hidden {
+            display: none;
+        }
+        .news-box {
+            background: #0f172a;
+            padding: 18px;
+            border-radius: 12px;
+            text-align: left;
+            margin-top: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+            border-left: 4px solid #ff4757;
+        }
+        .cake-container {
+            margin-top: 15px;
+        }
+        .cake-container img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 2px solid #334155;
+        }
+        h3 {
+            margin-top: 0;
+            color: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <!-- Step 1: Tap to Open View -->
+        <div id="step1">
+            <h3>🚨 Mukkiya Seithi!</h3>
+            <p>Innaikku oru special person-kaga itha design pannirukken. Open panni paarunga!</p>
+            <button class="btn" onclick="openNews()">TAP TO OPEN 🎁</button>
+        </div>
+
+        <!-- Step 2: Breaking News View -->
+        <div id="step2" class="hidden">
+            <div class="news-box">
+                <strong>🚨 BREAKING NEWS 🚨</strong><br><br>
+                Innaikku oru romba mukkiyamaana thinaari... Ennoda college classmate-ah entry kuthu, ippo en uyir-u Anna-va maarina oru nalla manusharoda Birthday! 🎂✨<br><br>
+                Master's padikka veliya oorukku poirunthaalum, ennoda annoying messages-ai ellam thaangikittu, enakku oru nalla guide-ah irukkura intha thalaivanukku... en manamaarntha piranthanaal vaazhthukkal! ❤️
+            </div>
+            <button class="btn" onclick="openCake()">VIEW SURPRISE 🎂</button>
+        </div>
+
+        <!-- Step 3: Cake & Final Wish View -->
+        <div id="step3" class="hidden">
+            <h3>🎉 Happy Birthday Anna! 🎉</h3>
+            <div class="cake-container">
+                <!-- Direct Working Birthday Cake Image Link -->
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Birthday Cake">
+            </div>
+            <p style="font-size: 13px; margin-top: 15px; color: #a1a1aa;">
+                Gift kudukka mudiyala naalum, intha oru sweet wish um un success-um thaan enakkum periya gift! Have a blast! 🚀
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Front-end & Logic control (JavaScript)
+        function openNews() {
+            document.getElementById('step1').classList.add('hidden');
+            document.getElementById('step2').classList.remove('hidden');
+        }
+
+        function openCake() {
+            document.getElementById('step2').classList.add('hidden');
+            document.getElementById('step3').classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
